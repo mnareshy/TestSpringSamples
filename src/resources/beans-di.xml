@@ -8,12 +8,24 @@
 		<property name="message">
 
 			<bean id="message" class="com.test.di.TextMessage">
-				<property name="text" value = "Sample Text"/>
-				
-				</bean>
-				
+				<property name="text" value="Sample Text" />
+
+			</bean>
+
 		</property>
 	</bean>
+
+	<bean id="helloWorldCon" class="com.test.di.HelloWorldCon">
+
+		<constructor-arg name = "message" ref="message1" />
+		<constructor-arg name = "localMsg" value="localMsg" />
+	</bean>
+	<bean id="message1" class="com.test.di.TextMessage">
+		<property name="text" value="Sample Text Con" />
+
+	</bean>
+
+
 
 
 

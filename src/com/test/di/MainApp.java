@@ -12,7 +12,9 @@ public class MainApp {
 
 		objA.sayMessage();
 		
-
+		HelloWorldCon objB = (HelloWorldCon) context.getBean("helloWorldCon");
+		
+		objB.sayMessage();
 		
 	}
 }
