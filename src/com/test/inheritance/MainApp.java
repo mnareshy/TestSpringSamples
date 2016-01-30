@@ -5,12 +5,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("resources/beans-inheritance.xml");
+//		ApplicationContext context = new ClassPathXmlApplicationContext("resources/beans-inheritance.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("resources/beans-abstract.xml");
 
-		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
-
-		objA.getMessage1();
-		objA.getMessage2();
+//		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
+//
+//		objA.getMessage1();
+//		objA.getMessage2();
 
 		HelloIndia objB = (HelloIndia) context.getBean("helloIndia");
 		objB.getMessage1();
